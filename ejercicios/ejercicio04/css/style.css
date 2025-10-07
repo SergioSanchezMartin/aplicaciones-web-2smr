@@ -1,0 +1,38 @@
+/* Cuando es un id, ponemos delante # */
+#titulo {
+    color: red;
+}
+/* Cuando es una clase, ponemos delante . */
+.trabajador-container {
+    background-color: gray;
+    margin:0;
+}
+
+h2 {
+    text-align: center;
+    padding: 5px;
+}
+
+.datos-personales {
+    /* border-style: solid;
+    border-width: 2px; */
+    border: 2px solid black;
+}
+
+.datos-estudios {
+    border: 5px double black;
+}
+
+/* Para colorear los titulos de los trabajadores tenemos dos opciones */
+/* 1) Por id*/
+#t1{
+    color: blue;
+}
+
+#t2{
+    color: green;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
