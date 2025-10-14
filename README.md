@@ -16,6 +16,4 @@
 - Salazar Gómez, José María[http://github.com/JoseMariSalazarGomez]
 - Suárez Arreza, Eric[http://github.com/EricSuarezArreza]
 - Torres Urbano, Manuel[http://github.com/manu847]
-- Zaim Wadghiri Amnad, Ismael[http://github.com/]
-- 
-- 
+- Zaim Wadghiri Amnad, Ismael (https://github.com/izaiamn854)
