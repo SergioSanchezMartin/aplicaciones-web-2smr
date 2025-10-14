@@ -9,7 +9,7 @@
 - Martín Muñoz, Fabio[http://github.com/Fabioamarmun17]
 - Medina Vargas, Jesús[http://github.com/JesusMedinaVargas]
 - Molina Jiménez, Juan Diego[http://github.com/JuanDiegoMolina]
-- Parejo Pomares, Pablo[http://github.com/]
+- Parejo Pomares, Pablo[http://github.com/PabloParPom]
 - Rengel Moreno, Pedro Jesús[http://github.com/prenmor2605]
 - Rodríguez Escalera, Jonathan[http://github.com/JonathanRodriguez21]
 - Ruiz Merino, Mario[http://github.com/MarioRuizMerino]
