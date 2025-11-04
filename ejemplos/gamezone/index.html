@@ -20,7 +20,8 @@
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Noticias</a></li>
                 <li><a href="#">Guías</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="/pages/contacto.html">Contacto</a></li>
+                <li><a href="/pages/registro.html">Registro</a></li>
             </ul>
         </nav>
     </header>
@@ -97,33 +98,6 @@
             </form>
         </section>
 
-        <!-- Formulario de registro con varios tipos de campos-->
-        <section class="tarjeta">
-            <h2>Registro de usuario</h2>
-            <form name="register" action="registro.html" method="post">
-
-                <!-- Campo de texto -->
-                <label for="nombre">Nombre de usuario:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellidos">     <!-- required convierte al campo en obligatorio -->
-
-                <!-- Contraseña -->
-                <label for="clave">Contraseña:</label>
-                <input type="password" id="clave" name="clave" minlength="6" maxlength="12" required>       <!-- minlength y maxlength ayuda a validar los datos antes de enviar-->
-                
-                <!-- Campo de email -->
-                <label for="correo">Email:</label>
-                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
-
-                <!-- Campo DNI/NIE -->
-                <label for="dni">DNI o NIE:</label>
-                <input type="text" id="dni" name="identidad" placeholder="12345678A/X1234567L" 
-                pattern="(([0-9]{8})|([X-Zx-z]{1}[0-9]{7}))[A-Za-z]{1}" required>
-
-                <!-- Botón de envío -->
-                <button type="submit">Registrarse</button>
-            </form>
-        </section>
-
         <section class="tarjeta">
             <form action="contacto.php" method="get">
                 <!-- Para agrupar varios campos del form -->
@@ -182,9 +156,11 @@
                     <input type="datetime-local" name="fecha-hora" id="fecha-hora">
                 </fieldset>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="5"
-                placeholder="Deja aquí tu mensaje..."></textarea>
+                <fieldset>
+                    <label for="mensaje">Mensaje:</label> <br>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="5"
+                    placeholder="Deja aquí tu mensaje..."></textarea>
+                </fieldset>
 
                 <input type="submit" value="Envío">
                 <input type="reset" value="Limpiar formulario">
