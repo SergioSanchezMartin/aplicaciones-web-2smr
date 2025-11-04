@@ -1,0 +1,143 @@
+/* Reset y base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabecera */
+header {
+  background-color: #F5A623;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+header h1 { margin: 0; }
+
+/* Main y footer */
+main {
+  background-color: beige;
+  padding: 2rem;
+  flex: 1;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Caja receta */
+.receta {
+  background-color: white;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Imagen */
+.imagen-receta img {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Títulos */
+.receta h1 {
+  color: #F5A623;
+  text-align: center;
+}
+.receta h2 {
+  color: #F5A623;
+  text-align: left;
+  margin: 0 0 .5rem 1rem;
+}
+
+/* NUEVO: Características (lista) */
+.caracteristicas {
+  margin: 0 1rem 1rem 1rem;
+  text-align: left;
+}
+.caracteristicas ul {
+  list-style: square;
+  padding-left: 20px;
+}
+.caracteristicas li {
+  margin-bottom: 6px;
+}
+.caracteristicas strong {
+  color: #F5A623;
+  font-weight: bold;
+}
+
+/* MODIFICADO: Ingredientes con tabla */
+.ingredientes {
+  margin-top: .5rem;
+}
+
+/* Contenedor para scroll horizontal en pantallas estrechas */
+.tabla-wrap {
+  margin: 0 1rem 1rem 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;            /* bordes redondeados del conjunto */
+  box-shadow: 0 1px 3px rgba(0,0,0,.06) inset;
+  background: #fff;
+}
+
+/* Tabla */
+.ingredientes table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;               /* evita roturas en móviles muy estrechos */
+}
+
+.ingredientes thead th {
+  background: #F5A623;
+  color: #fff;
+  padding: .75rem 1rem;
+  font-weight: bold;
+  position: sticky;               /* mejora UX si hay scroll */
+  top: 0;
+  text-align: center;
+}
+
+.ingredientes tbody td {
+  padding: .65rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.ingredientes tbody tr:nth-child(even) {
+  background: #fafafa;            /* zebra striping */
+}
+
+.ingredientes tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Texto elaboración */
+.elaboracion p {
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 1rem 1rem 1rem;
+}
+
+/* Opcional: mejora de foco/teclado en celdas */
+.ingredientes td, .ingredientes th {
+  outline-offset: 2px;
+}

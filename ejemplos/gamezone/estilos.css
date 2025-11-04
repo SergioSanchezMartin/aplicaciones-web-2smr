@@ -150,3 +150,15 @@ body {
     text-align: center;
     padding: 1rem;
 }
+
+/* FORMULARIOS */
+input{
+    border: 1px solid #2C3E50;
+}
+input:focus:valid {
+    border: 1px solid green ;
+}
+
+input:focus:invalid {
+    border: 1px solid red ;
+}
