@@ -283,19 +283,110 @@ button[type="submit"]:hover {
    Si no lo hubieramos puesto, no saltaría de línea, no puedes definir width, height ni margin-top/bottom.
 */
 
-.grid-container {
-    display: grid;          /* Activa el modo grid */
-    grid-template-columns: 200px 200px 200px;       /* 3 columnas de tamaño fijo */
-    grid-template-rows: 100px 100px;                /* 2 filas de tamaño fijo */
-    gap: 15px;                                      /* Separación uniforme entre celdas */
-    justify-content: center;                        /* Centra toda la cuadrícula dentro del section */
-    background-color: #eaeaea;
-    padding: 10px;
+.practica-grid.tarjeta {
+    width: min(1600px, 95%);
 }
 
-.grid-container :nth-child(1) { background-color: #E74C3C;}
+.grid-container {
+    min-height: 400px;
+    background-color: #eaeaea;
+    padding: 10px;
+    display: grid;          /* Activa el modo grid */
+    /* Definir número de columnas */
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-columns: 100px repeat(2, 400px); */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: 1fr auto 1fr; */
+    /* grid-template-columns: 35% 15% 50%; */
+    /* grid-template-columns: 1fr 1fr 2fr; */
+    grid-template-columns: 75px 125px 100px;
+    /* Definir número filas */
+    grid-template-rows: 100px 100px;
+    
+    /* Añadir espacio entre celdas/items */
+    /* row-gap: 5px;
+    column-gap: 30px; */
+
+    /* Atajo gap: row-gap + column-gap */
+    gap: 5px 30px;
+    /* gap: 15px; */
+
+
+    /* Alineación de los ítems respecto de su celda */
+    /* justify-items: center;
+    align-items: end; */
+    /* place-items: end start;     Atajo place-items = align-items + justify-item */
+    /* place-items: center; */
+    place-items: stretch;
+
+    /* Alineación de la cuadrícula respecto del grid container padre */
+    /* justify-content: space-evenly;
+    align-content: stretch; */
+    place-content: center;
+
+}
+
+.item-grid { background-color: goldenrod; }
+
+/* Para alinear una celda/ítem en particular */
+.item-5 {
+    background-color: green;
+    /* justify-self: end;
+    align-self: start; */
+    place-self: center;
+    /* order: -1; */
+}
+
+/* .grid-container :nth-child(1) { background-color: #E74C3C;}
 .grid-container :nth-child(2) { background-color: indigo ;}
 .grid-container :nth-child(3) { background-color: gold;}
 .grid-container :nth-child(4) { background-color: aquamarine}
 .grid-container :nth-child(5) { background-color: green ;}
-.grid-container :nth-child(6) { background-color: darkred ;}
+.grid-container :nth-child(6) { background-color: darkred ;} */
+
+.contenedor-areas {
+    display: grid;
+    min-height: 400px;
+
+    /* Fijamos número de columnas y filas */
+    grid-template-columns: 200px 3fr 1fr;
+    grid-template-rows: 2fr 5fr 1fr;
+
+    /* Plantilla de áreas - Disposición del grid */
+    grid-template-areas: 
+        "cabecera   cabecera    cabecera" 
+        "menu       principal   lateral"
+        "pie        pie         pie";
+
+    gap: 15px;
+}
+
+.area-header {
+    /* Asignamos nombre de área para el grid */
+    grid-area: cabecera;
+    background-color: blue;
+}
+
+.area-menu {
+    /* Asignamos nombre de área para el grid */
+    grid-area: menu;
+    background-color: green;
+}
+
+.area-main {
+    /* Asignamos nombre de área para el grid */
+    grid-area: principal;
+    background-color: goldenrod;
+}
+
+.area-aside {
+    /* Asignamos nombre de área para el grid */
+    grid-area: lateral;
+    background-color: aquamarine;
+}
+
+.area-footer {
+    /* Asignamos nombre de área para el grid */
+    grid-area: pie;
+    background-color: #b60000;
+}
