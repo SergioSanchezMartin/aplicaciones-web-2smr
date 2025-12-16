@@ -1,0 +1,30 @@
+#Vamos a montar un WordPress accesible desde navegador
+# Apache2 = servidor web
+# PHP 8.x = lenguaje de programación para comunicarse con la base de datos
+# MariaDB = base de datos
+# WordPress = gestor de contenidos (CMS) 
+
+#Instalar paquetes
+apt -y install apache2 mariadb-server
+apt -y install php libapache2-mod-php php-mysql php-curl php-gd php-mbstring php-xml php-zip php-intl
+apt -y install phpmyadmin (elegir apache2)
+
+#Arrancar y habilitar servicios
+sudo systemctl enable apache2
+sudo systemctl enable mariadb
+
+# Comprobar estado servicios (deben estar active running)
+sudo systemctl status apache2
+sudo systemctl status mariadb
+
+# Comprobamos en el navegador que el servidor web sirve la página web por defecto
+http://localhost
+
+# Configurar MariaDB para WordPress
+sudo mysql_secure_installation
+
+# Crear base de datos y usuario
+mariadb
+
+
+#Lo ultimo, hemos movido la carpeta
